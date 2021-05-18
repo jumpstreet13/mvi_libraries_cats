@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             setOnClickListener {
                 val intent = Intent(this@MainActivity, MviCoreActivity::class.java)
                 startActivity(intent)
-                Toast.makeText(this@MainActivity, "architecture", Toast.LENGTH_LONG).show()
             }
         }
     }
