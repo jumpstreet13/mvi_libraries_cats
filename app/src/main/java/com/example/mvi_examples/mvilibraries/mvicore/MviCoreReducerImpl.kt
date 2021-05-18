@@ -1,6 +1,6 @@
 package com.example.mvi_examples.mvilibraries.mvicore
 
-import com.ww.roxie.Reducer
+import com.badoo.mvicore.element.Reducer
 
 class MviCoreReducerImpl : Reducer<MviCoreState, MviCoreEffect> {
 

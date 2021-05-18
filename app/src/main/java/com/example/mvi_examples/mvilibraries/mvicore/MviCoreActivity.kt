@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mvi_examples.R
 import com.example.mvi_examples.mvilibraries.Cat
 import com.example.mvi_examples.mvilibraries.CatAdapter
-import com.abocha.mvilibraries.mvicore.MviCoreWish
-import com.example.mvi_examples.R
 import io.reactivex.functions.Consumer
 import kotlinx.android.synthetic.main.activity_experimental.*
 

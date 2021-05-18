@@ -58,4 +58,5 @@ dependencies {
     implementation 'com.github.badoo.mvicore:mvicore:1.2.6'
     implementation 'com.github.badoo.mvicore:mvicore-android:1.2.6'
     implementation 'com.github.badoo.mvicore:binder:1.2.6'
+    implementation 'com.github.badoo.mvicore:mvicore-diff:1.2.6'
 }

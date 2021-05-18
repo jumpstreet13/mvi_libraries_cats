@@ -5,12 +5,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mvi_examples.R
 import com.example.mvi_examples.mvilibraries.Cat
 import com.example.mvi_examples.mvilibraries.CatAdapter
 import com.example.mvi_examples.mvilibraries.CatsRepository
-import com.example.mvi_examples.R
 import kotlinx.android.synthetic.main.activity_experimental.*
 
 class RoxieActivity : AppCompatActivity() {
@@ -25,7 +25,7 @@ class RoxieActivity : AppCompatActivity() {
         recycler.layoutManager = LinearLayoutManager(this)
         title = "Roxie"
 
-        viewModel = ViewModelProviders.of(this, RoxieViewModelFactory(null, CatsRepository()))
+        viewModel = ViewModelProvider(this, RoxieViewModelFactory(null, CatsRepository()))
             .get(RoxieViewModel::class.java)
 
         viewModel.observableState.observe(this, Observer { state ->

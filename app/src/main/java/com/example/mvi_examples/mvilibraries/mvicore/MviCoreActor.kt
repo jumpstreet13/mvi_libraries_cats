@@ -2,7 +2,6 @@ package com.example.mvi_examples.mvilibraries.mvicore
 
 import com.example.mvi_examples.mvilibraries.Cat
 import com.example.mvi_examples.mvilibraries.CatsRepository
-import com.abocha.mvilibraries.mvicore.MviCoreWish
 import com.badoo.mvicore.element.Actor
 import io.reactivex.Observable
 import io.reactivex.Observable.just

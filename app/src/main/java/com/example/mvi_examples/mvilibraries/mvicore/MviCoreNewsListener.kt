@@ -2,7 +2,6 @@ package com.example.mvi_examples.mvilibraries.mvicore
 
 import android.content.Context
 import android.widget.Toast
-import com.example.mvi_examples.mvilibraries.mvicore.MviCoreNews
 import io.reactivex.functions.Consumer
 
 class MviCoreNewsListener(

@@ -1,6 +1,5 @@
 package com.example.mvi_examples.mvilibraries.mvicore
 
-import com.abocha.mvilibraries.mvicore.MviCoreWish
 import com.badoo.mvicore.element.NewsPublisher
 
 class MviCoreNewsPublisher : NewsPublisher<MviCoreWish, MviCoreEffect, MviCoreState, MviCoreNews> {

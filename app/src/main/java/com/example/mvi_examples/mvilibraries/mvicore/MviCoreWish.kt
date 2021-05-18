@@ -1,4 +1,4 @@
-package com.abocha.mvilibraries.mvicore
+package com.example.mvi_examples.mvilibraries.mvicore
 
 sealed class MviCoreWish {
     object LoadCats: MviCoreWish()
