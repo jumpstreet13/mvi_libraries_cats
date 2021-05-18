@@ -17,7 +17,7 @@ class MviCoreNewsListener(
     private fun errorHappened(throwable: Throwable) {
         Toast.makeText(
             context,
-            "Simulated error was triggered" + throwable.localizedMessage,
+            throwable.localizedMessage,
             Toast.LENGTH_SHORT
         ).show()
     }
