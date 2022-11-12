@@ -9,8 +9,7 @@ class RoxieViewModelFactory(
     private val catsRepository: CatsRepository
 ) : ViewModelProvider.NewInstanceFactory() {
 
-    @Suppress("unchecked_cast")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return RoxieViewModel(initialState, catsRepository) as T
     }
 }

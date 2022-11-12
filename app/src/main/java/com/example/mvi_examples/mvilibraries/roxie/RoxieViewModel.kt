@@ -50,6 +50,7 @@ class RoxieViewModel(
                     .startWith(RoxieChange.Loading)
             }
 
+
         disposables.add(loadCatsChange
             .scan(initialState, reducer)
             .filter { !it.isIdle }

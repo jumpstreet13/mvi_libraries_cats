@@ -33,6 +33,7 @@ class RoxieActivity : AppCompatActivity() {
         })
 
         viewModel.dispatch(RoxieAction.LoadCats)
+        viewModel.dispatch(RoxieAction.LoadDogsAndCats)
     }
 
     private fun renderState(state: RoxieState) {

@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mvi_examples.R
 import com.example.mvi_examples.mvilibraries.mosby.MosbyActivity
 import com.example.mvi_examples.mvilibraries.mvicore.MviCoreActivity
+import com.example.mvi_examples.mvilibraries.mvvm.MvvmCatsActivity
 import com.example.mvi_examples.mvilibraries.roxie.RoxieActivity
-import com.example.mvi_examples.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +35,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.mvi_core_button).apply {
             setOnClickListener {
                 val intent = Intent(this@MainActivity, MviCoreActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+        findViewById<Button>(R.id.mvvm_core_button).apply {
+            setOnClickListener {
+                val intent = Intent(this@MainActivity, MvvmCatsActivity::class.java)
                 startActivity(intent)
             }
         }
