@@ -24,7 +24,8 @@ class RoxieViewModel(
             )
             is RoxieChange.Cats -> state.copy(
                 isLoading = false,
-                cats = change.catsList
+                cats = change.catsList,
+                isLoadError = false
             )
             is RoxieChange.Error -> state.copy(
                 isLoading = false,
@@ -53,7 +54,7 @@ class RoxieViewModel(
 
         disposables.add(loadCatsChange
             .scan(initialState, reducer)
-            .filter { !it.isIdle }
+            //.filter { !it.isIdle }
             .distinctUntilChanged()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(state::setValue) { Log.e("Error", it.toString()) }

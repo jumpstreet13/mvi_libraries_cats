@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mvi_examples.R
 import com.example.mvi_examples.mvilibraries.mosby.MosbyActivity
 import com.example.mvi_examples.mvilibraries.mvicore.MviCoreActivity
+import com.example.mvi_examples.mvilibraries.mvp.MvpCatsActivity
 import com.example.mvi_examples.mvilibraries.mvvm.MvvmCatsActivity
 import com.example.mvi_examples.mvilibraries.roxie.RoxieActivity
 
@@ -42,6 +43,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.mvvm_core_button).apply {
             setOnClickListener {
                 val intent = Intent(this@MainActivity, MvvmCatsActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+        findViewById<Button>(R.id.mvp_core_button).apply {
+            setOnClickListener {
+                val intent = Intent(this@MainActivity, MvpCatsActivity::class.java)
                 startActivity(intent)
             }
         }

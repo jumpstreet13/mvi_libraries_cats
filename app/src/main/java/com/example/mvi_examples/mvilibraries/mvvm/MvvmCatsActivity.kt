@@ -14,7 +14,7 @@ import com.example.mvi_examples.mvilibraries.CatAdapter
 import kotlinx.android.synthetic.main.activity_mvvm_cats.*
 import kotlinx.coroutines.launch
 
-class MvvmCatsActivity : AppCompatActivity(), MyView {
+class MvvmCatsActivity : AppCompatActivity() {
 
     private val viewModel: CatsViewModel by viewModels { CatsViewModel.Factory }
     private val catAdapter = CatAdapter()
@@ -54,9 +54,5 @@ class MvvmCatsActivity : AppCompatActivity(), MyView {
     override fun onDestroy() {
         super.onDestroy()
         Log.e("MvvmCatsActivity ", "is destroyed")
-    }
-
-    override fun showProgress() {
-        progress.isVisible = true
     }
 }

@@ -25,15 +25,14 @@ class RoxieActivity : AppCompatActivity() {
         recycler.layoutManager = LinearLayoutManager(this)
         title = "Roxie"
 
-        viewModel = ViewModelProvider(this, RoxieViewModelFactory(null, CatsRepository()))
-            .get(RoxieViewModel::class.java)
+        viewModel = ViewModelProvider(this, RoxieViewModelFactory(null, CatsRepository()))[RoxieViewModel::class.java]
 
         viewModel.observableState.observe(this, Observer { state ->
             renderState(state)
         })
 
         viewModel.dispatch(RoxieAction.LoadCats)
-        viewModel.dispatch(RoxieAction.LoadDogsAndCats)
+        //viewModel.dispatch(RoxieAction.LoadDogsAndCats)
     }
 
     private fun renderState(state: RoxieState) {

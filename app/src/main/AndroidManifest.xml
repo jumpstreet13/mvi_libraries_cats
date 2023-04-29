@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvilibraries.mosby.MosbyActivity" />
+        <activity android:name=".mvilibraries.mvp.MvpCatsActivity" />
         <activity android:name=".mvilibraries.roxie.RoxieActivity" />
         <activity android:name=".mvilibraries.mvicore.MviCoreActivity" />
     </application>
